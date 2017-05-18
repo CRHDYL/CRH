@@ -18,5 +18,6 @@ $ git diff HEAD -- readme.txt //用git diff HEAD -- readme.txt命令可以查看
 $ git checkout -- readme.txt //丢弃工作区的修改：用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 $ git reset HEAD readme.txt //把暂存区的修改撤销掉（unstage），重新放回工作区：
 $ git rm test.txt //确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit：
-git remote add origin https://github.com/CRHDYL/CRH.git
-git push -u origin master
+git remote add origin https://github.com/CRHDYL/CRH.git //要关联一个远程库
+git push -u origin master  //第一次用-u.关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+$ git push origin master //此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
